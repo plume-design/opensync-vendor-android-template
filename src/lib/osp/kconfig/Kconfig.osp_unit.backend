@@ -1,0 +1,10 @@
+config OSP_UNIT_ANDROID
+    bool "Using Android OSP API"
+    help
+        OSP unit API implementation used for Android platform.
+
+if OSP_UNIT_ANDROID
+    config OSP_UNIT_ANDROID_SERIAL_PREFIX
+        string "Unit serial number prefix"
+        default "OSx"
+endif

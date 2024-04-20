@@ -1,0 +1,5 @@
+menuconfig VENDOR_IS_ANDROID
+    bool "Android"
+    help
+        OpenSync vendor layer for Android devices.
+

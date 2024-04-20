@@ -1,0 +1,5 @@
+config OSP_BLE_ANDROID
+    bool "Android Standard BLE"
+    depends on ANDROID_OPENSYNC_BLE_ENABLED
+    help
+        This option enables override of osp_ble functions

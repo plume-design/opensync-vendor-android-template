@@ -1,0 +1,35 @@
+if VENDOR_IS_ANDROID
+    menu "Android Options"
+        config LIBC_BIONIC
+            bool "Libc is Android Bionic"
+            default y
+
+        config APK_INSTALL_PATH
+            string "OpenSync Android Package Install Directory"
+            default "/data/data/com.opensync.app/"
+
+        config ANDROID_ZMQ_REQREP_SOCK_ADDR
+            string "OpenSync APP IPC Socket"
+            default "tcp://127.0.0.1:10086"
+
+        config ANDROID_ZMQ_PUBSUB_SOCK_ADDR
+            string "OpenSync APP IPC Socket"
+            default "tcp://127.0.0.1:10087"
+
+        config ANDROID_ZMQ_SOCKET_MAX_RETRY_TIMES
+            int "Threshold of ZMQ retry send times"
+            default 10
+            help
+                Threshold of ZMQ retry send times
+
+        config ANDROID_ZMQ_SOCKET_MAX_BACKOFF_TIME
+            int "Threshold of ZMQ backoff send time(ms)"
+            default 200
+            help
+                Threshold of ZMQ backoff send time(ms)
+
+        config ANDROID_OPENSYNC_BLE_ENABLED
+            bool "Enable BLEM on Android"
+            default n
+    endmenu
+endif

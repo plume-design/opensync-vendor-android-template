@@ -1,0 +1,4 @@
+config OSP_BLE_ANDROID
+    bool "Android Standard BLE"
+    help
+        This option enables support for override ble osp function on Android
